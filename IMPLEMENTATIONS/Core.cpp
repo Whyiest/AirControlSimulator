@@ -11,6 +11,8 @@ Core::~Core() {
               << "s" << std::endl;
 }
 
+/// Initialisaiton de la simulation en console.
+
 void Core::initialisation() {
     std::cout << "-------------------MENU-----------------" << std::endl
               << " 1 : Afficher les donnees des aeroports et des avions" << std::endl
@@ -52,7 +54,8 @@ void Core::initialisation() {
     }
 }
 
-///Boucle de la simulation
+/// Boucle de la simulation permettant la mise à jour des paramètres
+
 void Core::loop(bool doUpdate) {
     sf::Clock clock;
     sf::Time elapsedTime = sf::Time::Zero;
@@ -72,7 +75,8 @@ void Core::loop(bool doUpdate) {
     }
 }
 
-///Gère les évènements
+/// Gestion des évènements de la simulatio,
+
 void Core::handleEvents() {
     sf::Event event{};
 
@@ -97,7 +101,8 @@ void Core::handleEvents() {
     }
 }
 
-///Gère l'affichage
+/// Gestion de l'affichage de la simulation.
+
 void Core::display() {
     if (!m_window.hasFocus()) return;
 
